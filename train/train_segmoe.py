@@ -5,7 +5,8 @@ import torch
 from pathlib import Path
 from torch.utils.data import DataLoader
 from tqdm import tqdm  # 添加训练进度条
-import torchvision.transforms import v2
+from torchvision.transforms import v2
+import torch.nn.functional as F
 current_dir = Path(__file__).parent
 sys.path.append(str(current_dir.parent.parent))  # 修正路径层级
 import matplotlib.pyplot as plt
