@@ -14,3 +14,4 @@ img = pipeline(
     guidance_scale=7.5,
 ).images[0]
 img.save("out_dynamic_SegMoe.png")
+

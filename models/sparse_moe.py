@@ -31,7 +31,6 @@ class SparseMoeBlock(nn.Module):
         routing_weights = F.softmax(
             router_logits[:, selected_experts[0]], dim=1, dtype=torch.float
         )
-
         # we cast back to the input dtype
         # 将张量routing_weights转换回[因为此时精度更高float32]与输入张量hidden_states相同类型
         routing_weights = routing_weights.to(hidden_states.dtype)
